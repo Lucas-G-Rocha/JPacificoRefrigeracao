@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --azul: #004aadff;
+    --azulEscuro: #113146;
+    --bannnerColor: #BEE2F2;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    
+}
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Noto Sans", sans-serif;
+}
+::-webkit-scrollbar{
+    width: 12px;
+    
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 15px;
+    background-color: var(--azulEscuro);
+    
+}
+
+#header {
+    width: 100%;
+    height: 60px;
+    background-color: var(--azulEscuro);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 50px;
+    position: fixed;
+    z-index: 1000;
+    opacity: 95%;
+    
+}
+
+.titles {
+    font-family: 'Noto Sans', sans-serif;
+    text-transform: uppercase;
+    
+}
+
+#title-header {
+    margin-left: 5%;
+    color: rgb(255, 255, 255);
+    font-size: 2vw;
+    
+}
+
+#lista-navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    column-gap: 10px;
+    position: relative;
+    right: 10%;
+}
+
+#wppNAV {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+
+    font-size: 1vw;
+}
+
+#wppICO {
+    width: 1vw;
+    height: 1vw;
+    position: relative;
+    top: 3px;
+    fill: white;
+    margin-right: 4px;
+}
+
+#p {
+    color: white;
+
+}
+
+#emailNAV {
+    color: white;
+    text-decoration: none;
+
+    font-size: 1vw;
+
+}
+
+#emailICO {
+    fill: white;
+    width: 1vw;
+    height: 1vw;
+    position: relative;
+    top: 3px;
+    margin-right: 4px;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+}
+
+#inicio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--bannnerColor);
+    height: calc(110vh - 60px);
+    position: relative;
+    top: 60px;
+    width: 100%;
+    
+}
+
+#imagem-inicio {
+    width: 60vw;
+    height: 45vw;
+    margin-right: 2%;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+#inicioTXT-article {
+    top: 150px;
+    position: relative;
+    left: 2%;
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+}
+
+#title-inicio {
+    font-size: 2vw;
+    font-weight: bolder;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+}
+
+#title-inicio::after {
+    content: 'proporcionando o conforto que você merece';
+    font-size: 1.4vw;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.descricao {
+    font-size: 1.2vw;
+    margin-top: 3rem;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+#link-saibaMais {
+    color: white;
+    background-color: var(--azulEscuro);
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 55px;
+    width: max-content;
+    text-decoration: none;
+    top: 70px;
+    border-radius: 10px;
+    font-size: 1.3vw;
+    z-index: 1;
+}
+
+#link-saibaMais:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: var(--azul);
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    transition: all 0.3s ease;
+}
+
+#link-saibaMais:hover {
+    color: #fff;
+}
+
+#link-saibaMais:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+#link-saibaMais:active {
+    top: 70px;
+}
+
+
+.bordaAnimada {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    overflow: hidden;
+}
+
+
+.bordaAnimada::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #3498db;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.bordaAnimada:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+#menu {
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    position: relative;
+    width: 100%;
+    column-gap: 3vw;
+    transition: top 0.3 ease-in-out;
+    font-size: 1vw;
+    top: 60px;
+  }
+  #menu a{
+    color: white;
+    text-decoration: none;
+
+  }
+  
+  .fixoTopo{
+    position: fixed !important;
+    top: 60px ;
+    width: 100%;
+    z-index: 1000;
+    height: 45px;
+    opacity: 95%;
+  }
+.fixoTopo + #sobreNos{
+    padding-top: 60px;
+}
+#sobreNos{
+    position: relative;
+    margin-top: 60px;
+    scroll-margin-top: 25px;
+    scroll-margin-bottom: 10px; 
+}
+.sobreNos-Article{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+.div-sobreNosSection{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+    right: 5vw;
+    position: relative;
+}
+.title-section{
+    font-size: 2.5vw;
+    margin-top: 90px;
+    text-align: center;
+    position: relative;
+    white-space: nowrap;
+}
+.title-section span{
+    color: var(--azul);
+}
+.div-sobreNosSection .descricao{
+    text-align: right;
+    position: relative;
+    top: 3rem;
+}
+#img-TitleSection{
+    width: 50%;
+    transform: scaleX(-1);
+    position: relative;
+    left: 2vw;
+    user-select: none;
+    -webkit-user-drag: none;
+    
+}
+.subSection-sobreNos{
+    background-color: #FEE5A3;
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+    padding-bottom: 48px;
+}
+.sobreNosSection2{
+    display: flex;
+    flex-direction: column;
+
+}
+.title-section2{
+    font-size: 2vw;
+    text-align: left;
+    margin-left: 3vw;
+    margin-top: 100px;
+}
+.title-section3{
+    font-size: 2vw;
+    text-align: right;
+    margin-right: 3vw;
+}
+.sobreNosSection2 .descricao{
+    text-align: left;
+    margin-left: 3vw;
+    margin-top: 3rem;
+}
+#img-TitleSection2{
+    width: 50%;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+.wppLink{
+    color: white;
+    background-color: green;
+    width: max-content;
+    padding: 15px 55px;
+    border-radius: 10px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 6rem;
+    text-decoration: none;
+    font-size: 1.3vw;
+}
+
+.wppLink:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #937205;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    transition: all 0.3s ease;
+}
+
+.wppLink:hover {
+    color: #fff;
+}
+
+.wppLink:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+.wppICO2{
+    fill: white;
+    width: 1.3vw;
+    height: 1.3vw;
+    position: relative;
+    top: 3px;
+    
+    margin-right: 4px;
+}
+#servicos{
+   padding-top: 60px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: #113146;
+   margin-top: 0;
+   padding-bottom: 100px;
+   scroll-margin-top: 60px;
+}
+#title-servicos{
+    text-align: center;
+    font-size: 3vw;
+    margin-bottom: 5rem;
+    color: wheat;
+}
+.container-servicosArticles{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+
+}
+#article-servicos-instalacao{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+    margin-left: 10px;
+}
+#title-instalacaoServicos{
+    text-align: center;
+    color: wheat;
+}
+.servicos-img{
+    width: 30vw;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-drag: none;
+} 
+
+#article-servicos-manutencao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    margin-right: 10px;
+}
+#title-manutencaoServicos{
+    color: wheat;
+    text-align: center;
+}
+.center{
+    left: 0;
+    transform: translateX(0);
+    margin-top: 3rem;
+}
+.center::after{
+    background-color: rgb(0, 0, 0);
+}
+#avaliacoes{
+    display: flex;
+    flex-direction: column;
+    row-gap: 100px;
+    padding-top: 110px;
+    padding-bottom: 130px;
+    scroll-margin-top: 30px;
+}
+#title-avaliacoes{
+    text-align: center;
+    font-size: 3vw;
+}
+#avaliacoes-article{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.avaliacoes-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(80% / 3);
+    border-left: 1px solid rgb(117, 116, 116);
+    border-right: 1px solid rgb(117, 116, 116);
+    /* padding: 40px 20px; */
+    padding: 0 20px;
+    height: 430px;
+    transition: transform 0.3s ease-in-out;
+}
+.avaliacoes-container:hover{
+    border-left: 2px solid black;
+    border-right: 2px solid ; 
+    transform: scale(1.1);
+    
+}
+.img-avaliacao{
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    user-select: none;
+    -webkit-user-drag: none;
+    
+}
+.nome-avaliacao{
+    font-size: 1.3vw;
+    margin-top: 1rem;
+}
+.long{
+    height: 2px;
+    background-color: black;
+    width: 70%;
+    margin-top: 1rem;
+}
+.estrelas-avaliacao{
+    width: 2vw;
+    
+    user-select: none;
+    -webkit-user-drag: none;
+    margin-top: 10px;
+}
+.short{
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 2rem;
+}
+.comentario{
+    text-align: center;
+    font-size: 1vw;
+}
+#localizacao{
+    background: linear-gradient(to bottom right, #4d90fe 0%, #4d90fe 25%, #4285f4 25%, #4285f4 50%, #34a853 50%, #34a853 75%, #fbbc05 75%, #fbbc05 100%, #ea4335 100%);
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 70px;
+    padding-bottom: 200px;
+    scroll-margin-top: 70px;
+    
+}
+#title-localizacao{
+    text-align: center;
+    font-size: 3vw;
+    color: white;
+}
+#title-localizacao::after{
+    content: "Estamos localizados em Gaibu - Cabo/PE";
+    display: block;
+    font-size: 1.2vw;
+}
+#mapa-div{
+    width: 60vw;
+    height: 35vw;
+    
+}
+#endereco{
+    font-size: 1vw;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    
+}
+#mapa{
+    width: 60vw;
+    height: 35vw;
+    border: 2px solid black;
+}
+#footer{
+    background-color: black;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 30px 0;
+    border-top: 4px solid white;
+}
+#ulFooter{
+    display: flex;
+    flex-direction: column;
+    
+    color: white;
+    list-style-type: none;
+}
+.title-ulFooter{
+    font-size: 1.4vw;
+    margin-bottom: 1rem;
+    padding: 10px;
+    
+}
+.funcionamento-liFooter{
+    font-size: 1vw;
+    text-transform: lowercase;
+    padding: 10px;
+}
