@@ -123,17 +123,20 @@
 
                 <p 
                 class="descricao">
-                Vamos além da simples manutenção, oferecendo soluções adaptadas para garantir que
-                seu espaço esteja sempre na temperatura perfeita, com cuidado e atenção aos detalhes.<br><br>Sinta a diferença que uma <strong>manutenção bem-feita</strong> pode fazer para o seu lar.</p>
+                <span class="oculto">
+                    Vamos além da simples manutenção, oferecendo soluções adaptadas para garantir que
+                    seu espaço esteja sempre na temperatura perfeita, com cuidado e atenção aos detalhes.</span>
+                Sinta a diferença que uma <strong class="no-bold">manutenção bem-feita</strong> pode fazer para o seu lar.</p>
 
-                <a 
-                id="link-saibaMais" 
-                href="#sobreNos">
-                Saiba mais...</a>
+            
+                    <a
+                    id="link-saibaMais"
+                    href="#sobreNos">
+                    Saiba mais...</a>
             </article>
 
             <img 
-            id="imagem-inicio" 
+            id="imagem-inicio" class="oculto" 
             src="image/inicio.jpg" 
             alt="Banner">
             
@@ -622,23 +625,113 @@
 
     <script>
 
-        const nav = document.getElementById("menu");
-        const distanciaTopo = nav.getBoundingClientRect().top + window.scrollY;
+window.onload = function () {
+            const nav = document.getElementById("menu");
+            let distanciaTopo = nav.getBoundingClientRect().top + window.scrollY;
+    
+            window.onscroll = function () {
+                fixarMenuNoTopo(nav, distanciaTopo);
+            };
+            window.onresize = function () {
+            // Recalcula a posição inicial ao redimensionar a tela
+            distanciaTopo = nav.getBoundingClientRect().top + window.scrollY;
+            };
+        };
+    
+        function fixarMenuNoTopo(nav, distanciaTopo) {
+            const scrollAtual = window.scrollY;
+            const larguraDaTela = window.innerWidth;
 
-        window.onscroll = function () {
-            fixarMenuNoTopo();
-        }
-
-        function fixarMenuNoTopo() {
-            if ((window.pageYOffset + 60) >= distanciaTopo) {
+        // Modifique o comportamento com base na largura da tela
+        if (larguraDaTela <= 2720 && larguraDaTela > 1640) {
+          // Lógica para telas pequenas
+          
+            if (scrollAtual + 110 >= distanciaTopo) {
                 nav.classList.add("fixoTopo");
-
             } else {
                 nav.classList.remove("fixoTopo");
-
+                }
+    
+                // Atualiza a posição inicial quando o usuário rola para cima
+            if (scrollAtual < distanciaTopo) {
+                distanciaTopo = nav.getBoundingClientRect().top + scrollAtual;
+                }
             }
+    
+        if (larguraDaTela <= 1640 && larguraDaTela > 1224) {
+          // Lógica para telas pequenas
+          
+            if (scrollAtual + 50 >= distanciaTopo) {
+                nav.classList.add("fixoTopo");
+            } else {
+                nav.classList.remove("fixoTopo");
+                }
+    
+                // Atualiza a posição inicial quando o usuário rola para cima
+            if (scrollAtual < distanciaTopo) {
+                distanciaTopo = nav.getBoundingClientRect().top + scrollAtual;
+                }
         }
-        console.log(distanciaTopo);
+    
+
+        if (larguraDaTela <= 1224 && larguraDaTela > 868) {
+          // Lógica para telas pequenas
+          
+            if (scrollAtual + 50 >= distanciaTopo) {
+                nav.classList.add("fixoTopo");
+            } else {
+                nav.classList.remove("fixoTopo");
+                }
+    
+                // Atualiza a posição inicial quando o usuário rola para cima
+            if (scrollAtual < distanciaTopo) {
+                distanciaTopo = nav.getBoundingClientRect().top + scrollAtual;
+                }
+            }
+
+            
+        
+        
+
+        if (larguraDaTela <= 868 && larguraDaTela > 525) {
+          // Lógica para telas pequenas
+          
+            if (scrollAtual + 40 >= distanciaTopo) {
+                nav.classList.add("fixoTopo");
+            } else {
+                nav.classList.remove("fixoTopo");
+                }
+    
+                // Atualiza a posição inicial quando o usuário rola para cima
+            if (scrollAtual < distanciaTopo) {
+                distanciaTopo = nav.getBoundingClientRect().top + scrollAtual;
+                }
+            
+
+                
+            };
+            
+            if (larguraDaTela <= 525 && larguraDaTela > 375) {
+          // Lógica para telas pequenas
+          
+            if (scrollAtual + 25>= distanciaTopo) {
+                nav.classList.add("fixoTopo");
+            } else {
+                nav.classList.remove("fixoTopo");
+                }
+    
+                // Atualiza a posição inicial quando o usuário rola para cima
+            if (scrollAtual < distanciaTopo) {
+                distanciaTopo = nav.getBoundingClientRect().top + scrollAtual;
+                }
+            
+
+                
+            };
+            
+            fixarMenuNoTopo(nav, distanciaTopo);
+
+        };
     </script>
 </body>
 
