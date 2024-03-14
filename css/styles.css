@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
 :root {
     --azul: #004aadff;
     --azulEscuro: #113146;
     --bannnerColor: #BEE2F2;
-    
+    --backgroundColor-white: rgb(255, 255, 255);
+    --whatsappColor: white;
 }
 
 * {
@@ -47,16 +48,15 @@ body {
 }
 
 .titles {
-    font-family: 'Noto Sans', sans-serif;
-    text-transform: uppercase;
+    text-transform: capitalize;
     
 }
 
 #title-header {
     margin-left: 5%;
-    color: rgb(255, 255, 255);
+    color: var(--backgroundColor-white);
     font-size: 2vw;
-    
+    text-transform: uppercase;
 }
 
 #lista-navbar {
@@ -70,8 +70,8 @@ body {
     right: 10%;
 }
 
-#wppNAV {
-    color: white;
+.wppNAV {
+    color: white !important;
     text-decoration: none;
     display: inline-block;
 
@@ -87,13 +87,14 @@ body {
     margin-right: 4px;
 }
 
-#p {
+#divisorNAV {
     color: white;
+    font-size: 1vw;
 
 }
 
-#emailNAV {
-    color: white;
+.emailNAV {
+    color: white !important;
     text-decoration: none;
 
     font-size: 1vw;
@@ -217,7 +218,7 @@ body {
     display: inline-block;
     padding: 10px;
     text-decoration: none;
-    color: #333;
+    color: white;
     overflow: hidden;
 }
 
@@ -265,20 +266,21 @@ body {
   
   .fixoTopo{
     position: fixed !important;
-    top: 60px ;
+    top: 60px;
     width: 100%;
     z-index: 1000;
     height: 45px;
     opacity: 95%;
   }
-.fixoTopo + #sobreNos{
-    padding-top: 60px;
-}
+/* .fixoTopo + #sobreNos{
+    padding-top: 120px;
+} */
 #sobreNos{
     position: relative;
-    margin-top: 60px;
+    padding-top: 60px;
     scroll-margin-top: 25px;
     scroll-margin-bottom: 10px; 
+    z-index: -1;
 }
 .sobreNos-Article{
     width: 100%;
@@ -432,6 +434,7 @@ body {
 #title-instalacaoServicos{
     text-align: center;
     color: wheat;
+    font-size: 1.4vw;
 }
 .servicos-img{
     width: 30vw;
@@ -450,6 +453,7 @@ body {
 #title-manutencaoServicos{
     color: wheat;
     text-align: center;
+    font-size: 1.4vw;
 }
 .center{
     left: 0;
@@ -484,7 +488,7 @@ body {
     width: calc(80% / 3);
     border-left: 1px solid rgb(117, 116, 116);
     border-right: 1px solid rgb(117, 116, 116);
-    /* padding: 40px 20px; */
+    margin-top: 50px;
     padding: 0 20px;
     height: 430px;
     transition: transform 0.3s ease-in-out;
@@ -587,10 +591,372 @@ body {
     font-size: 1.4vw;
     margin-bottom: 1rem;
     padding: 10px;
-    
+       
 }
 .funcionamento-liFooter{
     font-size: 1vw;
     text-transform: lowercase;
     padding: 10px;
+}
+
+@media only screen and (max-width: 2720px) {
+    #header{
+        height: 110px;
+    }
+
+    #imagem-inicio{
+        width: 50vw;
+    }
+
+    #inicioTXT-article{
+        left: 4%;
+        top: 20%;
+    }
+    #title-inicio{
+        font-size: 2.5vw;
+    }
+    #title-inicio::after{
+        font-size: 1.6vw;
+    }
+    .descricao{
+        margin-top: 5rem;
+    }
+
+    #inicioTXT-article .descricao{
+        margin-top: 6rem;
+    }
+    #link-saibaMais{
+        font-size: 1.5vw;
+        padding: 25px 65px;
+        top: 90px;
+    }
+    #menu{
+        font-size: 1.1vw;
+        padding: 20px;
+    }
+    .fixoTopo{
+        height: 75px;
+        top: 110px !important;
+    }
+    #sobreNos{
+        scroll-margin-top: 15px;
+
+    }
+    .sobreNosSection2{
+        width: 50%;
+    }
+    .sobreNosSection2 .descricao{
+        margin-top: 5rem;
+    }
+    .wppLink{
+        margin-top: 10rem;
+        padding: 25px 65px;
+    }
+
+    .title-section2{
+        margin-top: 200px;
+    }
+
+    #servicos{
+        scroll-margin-top: 135px;
+    }
+    #avaliacoes{
+        scroll-margin-top: 85px;
+    }
+    .avaliacoes-container{
+        height: 25vw;
+    }
+    #localizacao{
+        scroll-margin-top: 130px;
+    }
+    #footer{
+        padding: 100px 0;
+    }
+    .title-ulFooter{
+        font-size: 1.8vw;
+    }
+    .funcionamento-liFooter{
+        font-size: 1.1vw;
+    }
+    #ulFooter .wppNAV, #ulFooter .emailNAV{
+        font-size: 1.1vw;
+    }
+}
+
+@media only screen and (max-width: 1640px){
+  #header{
+    height: 50px;
+  }  
+  #inicioTXT-article{
+    top: 14%;
+  }
+  #image-inicio{
+    width: 50vw;
+  }
+  #inicioTXT-article .descricao{
+    margin-top: 4rem;
+  }
+  .descricao{
+    margin-top: 2rem;
+  }
+  #link-saibaMais{
+    font-size: 1.4vw;
+    padding: 20px 60px;
+  }
+  #menu{
+    padding: 10px;
+  }
+  .fixoTopo{
+    height: 40px;
+    top: 50px !important;
+    
+  }
+  .sobreNosSection2{
+    width: 50vw;
+  }
+  .sobreNosSection2 .descricao{
+    margin-top: 5rem;
+  }
+  .descricao2{
+    margin-top: 2rem !important;
+  }
+  .title-section2{
+    margin-top: 125px; 
+  }
+  .wppLink{
+    margin-top: 5rem;
+    padding: 20px 60px;
+  }
+  #sobreNos{
+    scroll-margin-top: -100px;
+  }
+  #servicos{
+    scroll-margin-top: 40px;
+  }
+  #avaliacoes{
+    scroll-margin-top: 25px;
+  }
+  .avaliacoes-container{
+    height: 30vw;
+  }
+  #localizacao{
+    scroll-margin-top: 60px;
+  }
+}
+
+@media only screen and (max-width: 1224px){
+    #header{
+       height: 50px; 
+    }
+    #inicio{
+        top: 49px;
+        height: calc(110vh - 200px);
+    }
+    #inicioTXT-article{
+        top: 10%;
+    }
+    #link-saibaMais{
+        top: 80px;
+    }
+    #menu{
+        margin-top: -11px;
+    }
+    .fixoTopo{
+        height: 35px;
+        top: 60px !important;
+    }
+}
+@media only screen and (max-width: 868px){
+    #header{
+        height: 40px;
+    }
+    #inicio{
+        top: 29px;
+        height:  calc(110vh - 350px);
+    }
+    #inicioTXT-article{
+        top: 15%;
+    }
+    #inicioTXT-article .descricao{
+        margin-top: 2.5rem;
+    }
+    #link-saibaMais{
+        top: 40px;
+        padding: 15px 40px;
+
+    }
+    #emailNAV{
+        font-size: 1.1vw;
+    }
+    #wppNAV{
+        font-size: 1.1vw;
+    }
+    #wppICO{
+        width: 1.2vw;
+        height: 1.2vw;
+        margin-right: 2px;
+    }
+    #emailICO{
+        width: 1.2vw;
+        height: 1.2vw;
+        margin-right: 2px;
+    }
+    #menu{
+        margin-top: -31px;
+        height: 40px;
+    }
+    .div-sobreNosSection .title-section{
+        margin-top: 25px;
+    }
+    .div-sobreNosSection .descricao{
+        margin-top: 1rem;
+    }
+    #img-TitleSection2{
+        width: 50%;
+        
+    }
+    .subSection-sobreNos{
+        padding-bottom: 10px;
+    }
+    .title-section2{
+        margin-top: 60px;
+    }
+    .sobreNosSection2 .descricao{
+        margin-top: 3rem;
+    }
+    .wppLink{
+        margin-top: 30px;
+        padding: 15px 40px;
+    }
+    #avaliacoes{
+        row-gap: 60px;
+        padding-top: 70px;
+        padding-bottom: 100px;
+    }
+    .estrelas-container .short{
+        margin-bottom: 1rem;
+    }
+
+    #footer{
+        padding: 50px 0;;
+    }
+    #mapa{
+        width: 100%;
+        height: 100%;
+    }
+    .fixoTopo{
+        top: 70px !important;
+        height: 30px !important;
+    }
+}
+
+@media only screen and (max-width: 525px){
+   
+    
+    #header{
+        height: 25px;
+    }
+    #main{
+        position: absolute;
+        z-index: -5;
+    }
+    #lista-navbar{
+        column-gap: 0;
+    }
+    #wppNAV{
+        font-size: 1.5vw;
+    }
+    #wppICO{
+        width: 1.7vw;
+        height: 1.7vw;
+    }
+    #emailNAV{
+        font-size: 1.5vw;
+    }
+    #emailICO{
+        width: 1.7vw;
+        height: 1.7vw;
+    }
+    .bordaAnimada::before{
+        bottom: 5px;
+        height: 1px;
+    }
+    #inicio{
+        top: 25px;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        z-index: -2;
+        
+    }
+    #inicio::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(image/inicio.jpg);
+        filter: brightness(50%); 
+        z-index: -3;
+        background-size: cover; 
+    }
+    #inicioTXT-article{
+        top: -15%;
+        left: -0.5%;
+        
+    }
+    #title-inicio{
+        color: whitesmoke;
+        font-size: 5vw;
+    }
+    #title-inicio::after{
+        font-size: 3vw;
+    }
+    #inicioTXT-article .descricao{
+        color: whitesmoke;
+        font-size: 3vw;
+        position: relative;
+        font-weight: bolder;
+        top: 100px;
+        font-family: Kalam;
+        font-weight: bold;
+    }
+    .descricao .no-bold{
+        font-weight: bold;
+    }
+    #link-saibaMais{
+        font-size: 2.5vw;
+        top: 120px;
+
+        z-index: 4;
+    }
+    #link-saibaMais:active{
+        top: 120px;
+    }   
+    #imagem-inicio{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        filter: brightness(50%);
+        left: 0;
+        z-index: -5;
+    }
+    .oculto{
+        display: none;
+    }
+    #menu{
+        margin-top: -35px;
+        height: 20px;
+        font-size: 1.5vw;
+        column-gap: 6vw;
+    }
+    .fixoTopo{
+        height: 20px !important;
+        margin-top: -45px !important;
+    }
+
+    
 }
