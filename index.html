@@ -21,7 +21,7 @@
     <link 
     rel="icon" 
     type="image/x-icon" 
-    href="image/LogoRedonda.png">
+    href="/image/LogoRedonda.png">
 
     <title>J Pacífico Refrigeração</title>
 
@@ -34,10 +34,10 @@
     <header 
     id="header">
 
-        <h1 
+        <a href="#inicio"
         id="title-header" 
         class="titles">
-        J Pácifico Refrigeração</h1>
+        J Pácifico Refrigeração</a>
 
         <nav 
         id="navbar">
@@ -71,7 +71,7 @@
                             </g>
                         </g>
                     </svg>
-                    (81) 9 8307-6626
+                    <span class="oculto">(81) 9 8307-6626</span>
                 </a>
 
                 <p
@@ -94,7 +94,7 @@
                         <path
                             d="M19,1H5A5.006,5.006,0,0,0,0,6V18a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V6A5.006,5.006,0,0,0,19,1ZM5,3H19a3,3,0,0,1,2.78,1.887l-7.658,7.659a3.007,3.007,0,0,1-4.244,0L2.22,4.887A3,3,0,0,1,5,3ZM19,21H5a3,3,0,0,1-3-3V7.5L8.464,13.96a5.007,5.007,0,0,0,7.072,0L22,7.5V18A3,3,0,0,1,19,21Z" />
                     </svg>
-                    visualgraficbi@hotmail.com
+                    <span class="oculto">visualgraficbi@hotmail.com</span>
                 </a>
 
                 </div>
@@ -182,21 +182,25 @@
 
                     <p 
                     class="descricao">
-                    Com uma trajetória de sucesso que ultrapassa 9 anos, <strong>somos a escolha confiável</strong> quando se trata de serviços especializados em conserto de Ar Condicionados. Nosso compromisso inabalável com a excelência nos diferencia, proporcionando a você <strong>não apenas um serviço, mas uma experiência excepcional.</strong>
+                    Com uma trajetória de sucesso que ultrapassa 9 anos, <strong>somos a escolha confiável</strong> quando se trata de serviços especializados em conserto de Ar Condicionados. <span class="oculto">Nosso compromisso inabalável com a excelência nos diferencia.</span> Proporcionando a você <strong>não apenas um serviço, mas uma experiência excepcional.</strong>
                     </p>
 
                     <p 
                     class="descricao">
-                    Na essência do nosso negócio está a busca incessante por oferecer o atendimento que você merece.
-                    Não somos apenas uma empresa, somos parceiros comprometidos em <strong>garantir o conforto e
-                    bem-estar em seu ambiente</strong>. Afinal, entendemos que a qualidade não é apenas uma
-                    opção, mas uma necessidade que impulsiona cada ação nossa.
+                    <span class="oculto">Na essência do nosso negócio está a busca incessante por oferecer o atendimento que você merece.</span>
+                    <span class="centralizar">
+                        Não somos apenas uma empresa, somos parceiros comprometidos em <strong>garantir o conforto e
+                        bem-estar em seu ambiente</strong>.
+                    </span> <span class="oculto">
+                        Afinal, entendemos que a qualidade não é apenas uma
+                        opção, mas uma necessidade que impulsiona cada ação nossa.
+                    </span>
                     </p>
 
                 </div>
 
                 <img 
-                id="img-TitleSection" 
+                id="img-TitleSection"
                 src="image/sobreNos-1.jpg" 
                 alt="">
 
@@ -696,7 +700,7 @@ window.onload = function () {
         if (larguraDaTela <= 868 && larguraDaTela > 525) {
           // Lógica para telas pequenas
           
-            if (scrollAtual + 40 >= distanciaTopo) {
+            if (scrollAtual + 50 >= distanciaTopo) {
                 nav.classList.add("fixoTopo");
             } else {
                 nav.classList.remove("fixoTopo");
@@ -711,10 +715,10 @@ window.onload = function () {
                 
             };
             
-            if (larguraDaTela <= 525 && larguraDaTela > 375) {
+            if (larguraDaTela <= 525 && larguraDaTela > 0) {
           // Lógica para telas pequenas
           
-            if (scrollAtual + 25>= distanciaTopo) {
+            if (scrollAtual + 45>= distanciaTopo) {
                 nav.classList.add("fixoTopo");
             } else {
                 nav.classList.remove("fixoTopo");
